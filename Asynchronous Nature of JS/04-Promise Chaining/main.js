@@ -34,4 +34,4 @@ function main(t1, t2, t3) {
   });
 }
 
-main();
+main(1, 0.5, 1);
