@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <script>
+    function calculate() {
+      const x = parseInt(document.getElementById("firstNumber").value);
+      const y = parseInt(document.getElementById("secondNumber").value);
+      const operator = document.getElementById("operator").value;
+
+      const obj = document.getElementById("result")
+
+      switch(operator) {
+        case "+": {
+          obj.innerHTML = `x + y = ${x + y}`;
+          break;
+        }
+        case "-": {
+          obj.innerHTML = `x - y = ${x - y}`;
+          break;
+        }
+        case "*": {
+          obj.innerHTML = `x * y = ${x * y}`;
+          break;
+        }
+        case "/": {
+          if(y != 0) obj.innerHTML = `x / y = ${x / y}`;
+          else obj.innerHTML = `Error! Denominator cannot be 0`
+          break;
+        }
+        case "%": {
+          obj.innerHTML = `x % y = ${x % y}`;
+          break;
+        }
+        default: {
+          obj.innerHTML = `Try again with correct input`;
+        }
+      }
+    }
+  </script>
+
+  <h1>Simple Calculator</h1>
+
+  <div>
+    <input type="text" placeholder = "Enter first number" id = "firstNumber">
+  </div>
+  <br>
+
+  <div>
+    <input type="text" placeholder="Enter second number" id = "secondNumber">
+  </div>
+  <br>
+
+  <div>
+    <input type="text" placeholder="+, -, *, *, %" id = "operator">
+  </div>
+  <br>
+
+  <div>
+    <button onClick = "calculate()">Result</button>
+  </div>
+  <br>
+
+  <div id = "result">
+
+  </div>
+
+</body>
+</html>
