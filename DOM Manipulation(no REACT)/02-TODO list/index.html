@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO</title>
+</head>
+<body>
+  <script>
+    let count = 1;
+
+    function completeTheTask(id) {
+      const MaDButton = document.getElementById(id);
+      MaDButton.innerHTML = `Done`;
+    }
+
+    function addTODO() {
+      const task = document.getElementById("task").value;
+      const description = document.getElementById("description").value;
+
+    /*
+      <div>
+        <h4>Task: </h4>
+        <br>
+        <p></p>
+        <br>
+        <button>Mark as Done</button>
+        <br>
+      </div>
+    */
+      
+      const outterDiv = document.createElement("div");
+      const taskH4 = document.createElement("h4");
+      const descriptionP = document.createElement("p");
+      const MaDButton = document.createElement("button");
+
+      MaDButton.setAttribute("onClick", `completeTheTask(${count})`);
+      MaDButton.setAttribute("id", count);
+
+      taskH4.innerHTML = `Task: ${task}`;
+      descriptionP.innerHTML = `${description}`;
+      MaDButton.innerHTML = `Mark as Done`;
+
+      outterDiv.appendChild(taskH4);
+      outterDiv.appendChild(descriptionP);
+      outterDiv.appendChild(MaDButton);
+      outterDiv.appendChild(document.createElement("br"));
+
+      const allTODOs = document.getElementById("allTODOs");
+      allTODOs.appendChild(outterDiv);
+      count++;
+    }
+  </script>
+
+  <h1>TODO Taks</h1>
+
+  <div>
+    <p>Enter task</p>
+    <input type="text" placeholder="Enter task" id = "task">
+  </div>
+
+  <div>
+    <p>Enter description for the above task</p>
+    <input type="text" placeholder="Enter description" id = "description">
+  </div>
+  
+  <br>
+  <div>
+    <button onClick = "addTODO()">Add TOTO</button>
+  </div>
+  
+  <br>
+  <div id = "allTODOs">
+
+  </div>
+
+</body>
+</html>
