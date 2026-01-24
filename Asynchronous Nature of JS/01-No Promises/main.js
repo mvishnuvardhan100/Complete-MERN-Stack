@@ -1,18 +1,18 @@
-function displayName() {
+function displayDetails() {
   console.log("Name: M Vijay Vishnu Vardhan");
+  console.log("Age: 19");
+  console.log("Not married");
 }
 
-function displayAge() {
-  console.log("Age: " + 19);
-}
-
-setTimeout(displayName, 1000);
-displayAge();
+setTimeout(displayDetails, 1000);
+console.log("The End");
 
 /*
+Output:
 
-output:
-Age: 19
+The End
 Name: M Vijay Vishnu Vardhan
+Age: 19
+Not married
 
 */
