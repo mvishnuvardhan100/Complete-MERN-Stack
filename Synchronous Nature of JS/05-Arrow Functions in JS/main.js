@@ -1,5 +1,5 @@
-const product = (a, b) => {
-  return a * b;
+const sum = (a, b) => {
+  return a + b;
 }
 
-console.log("2 x 2 = " + product(2, 2));
+console.log(sum(2, 4));
