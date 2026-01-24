@@ -1,20 +1,20 @@
-//string APIs
-let s = " Hi Hello Hi Hello  ";
-console.log(s);
-s = s.trim();//will trim the leading and trailing white spaces
-console.log(s);
-console.log("Length of the string: " + s.length);
-console.log("Index of Hi: " + s.indexOf("Hi"));
-console.log("Last index of Hi: " + s.lastIndexOf("Hi"));
-console.log("Slice of the string: " + s.slice(0, 2));
-console.log("Uppercase: " + s.toUpperCase());
-console.log("Lowercase: " + s.toLowerCase());
-console.log(s.replace("Hello", "Hi"));
+//String APIs
+let str = "  Hi Hello Hello Hi  ";
+str = str.trim(); //will remove the white space from both the beginning and the end of string 
+console.log(str);
+console.log("Length: " + str.length);
+console.log("Index of Hi: " + str.indexOf("Hi"));
+console.log("Last Index of Hi: " + str.lastIndexOf("Hi"));
+console.log(str.slice(0, 2));
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str.replace("Hi", "Hello"));
 
 //Array APIs
-const nums = [1, 2, 3, 4, 5];
+
+const nums = [1, 2, 3, 4];
 console.log(nums);
-nums.push(6);
+nums.push(5);
 console.log(nums);
 nums.pop();
 console.log(nums);
@@ -24,6 +24,7 @@ nums.shift();
 console.log(nums);
 
 //for-each loop
-nums.forEach((val, i) => {
-  console.log("nums[" + i + "] = " + val);
+nums.forEach((val, ind) => {
+  console.log("nums[" + ind + "] = " + val);
 });
+
