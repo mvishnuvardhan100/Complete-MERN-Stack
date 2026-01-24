@@ -1,58 +1,71 @@
-//Variables in JS
-var a = 10; //function scoped, can be redeclared and can be reassigned
-let b = 20; //block scoped, cannot be redeclared abn can be reassigned
-const c = 30; //block scoped, cannot be redeclared abn cannot be reassigned
+//Variables
+var a = 10; //function-scoped, can be redeclared and can be reassigned.
+let b = 20; //block-scoped, cannot be redeclared and can be reassigned.
+const c = 30;//block-scoped, cannot be redeclared and cannot be reassigned.
 
 let username = "mvishnuvardhan100";
-let followers = 211, following = 616;
-console.log("Instagram username: " + username);
-console.log("Following: " + following + " & Followers: " + followers);
+let followers = 207, following = 615;
 
-//if-else statement
+console.log("Username: " + username);
+console.log("Followers: " + followers);
+console.log("Following: " + following);
+
+//if-else statements
 if(followers >= 500) {
-  console.log(username + " is popular on Instagram");
-}
-else {
-  console.log(username + " is not so popular on Instagram");
+  console.log(username + " is quite popular");
+} else {
+  console.log(username + " is not popular");
 }
 
+//while loop
 
-//using while loop to calculate the sum of first 100 natural numbers
-let sumOf100Natural = 0, i = 1;
-while(i <= 100) {
-  sumOf100Natural += i;
+//Q-Using a while loop try to get the sum of first n natural numbers
+let n = 10;
+let i = 0;
+let sumOfN = 0;
+while(i <= n) {
+  sumOfN += i;
   i++;
 }
-console.log("Sum of first 100 natural numbers: " + sumOf100Natural);
+console.log("Sum of first 10 natural numbers: " + sumOfN);
 
-//using for loop to calculate the sum of first 50 odd natural numbers
-let sumOf50Odd = 0;
-for(let i = 1; i <= 100; i += 2) {
-  sumOf50Odd += i;
+
+//for loop
+
+//Q-Usinng a for loop try to get the sum of all even natural numbers which are under n
+
+let sumOfEvenN = 0;
+for(let i = 0; i <= n; i += 2) {
+  sumOfEvenN += i;
 }
-console.log("Sum of first 50 odd natural numbers: " + sumOf50Odd);
-
+console.log("Sum of all even natural numbers under 11: " + sumOfEvenN);
 
 //Arrays
+
 const nums = [1, 2, 3, 4, 5];
-//let's traverse through this array
+
+//Just traverse though the above array and print the array elements using a for loop
 for(let i = 0; i < nums.length; i++) {
   console.log("nums[" + i + "] = " + nums[i]);
 }
 
-
 //JavaScript Object
-const userDetails = {
-  username: "mvishnuvardhan100",
-  following: 616,
-  followers: 211
-};
-//Accessing the JS Object in two ways
-console.log("Instagram username: " + userDetails.username);
-console.log("Following: " + userDetails["following"]);
-console.log("Followers: " + userDetails["followers"]);
 
-//Functions in JS
+const userDetails = {
+  firstName: "Vijay",
+  age: 19,
+  isMarried: false
+};
+
+console.log("Firstname: " + userDetails.firstName);
+console.log("Age: " + userDetails["age"]);
+if(userDetails.isMarried) {
+  console.log(userDetails.firstName + " is married");
+} else {
+  console.log(userDetails.firstName + " is not married");
+}
+
+//functions in JS
 function sum(a, b) {
   return a + b;
 }
